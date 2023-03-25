@@ -1,0 +1,12 @@
+client1:
+Barbosa
+Sam
+20 impasse des hauts bouleaux
+78450
+0783289050
+client2:
+bidule
+machin
+avenue de paris
+78450
+098766784

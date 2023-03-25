@@ -1,0 +1,55 @@
+###INSERTION###
+
+# tableau non trié
+algo_insertion_tab_non_trie(tab:tableau, x: entier) t:entier
+Debut
+    fin = fin + 1
+    tab[fin] = x
+Fin
+
+#tableau trié
+algo_insertion_tab_trie(tab: tableau, x: entier) t :entier
+Debut
+    Si Fin == 0:
+        fin <- fin + 1
+        tab[fin] <- x
+    Sinon
+        i <- 1
+        tant que (i < Fin et T[i] < x) 
+            i <- i+1
+        fin tant que
+        si (i = S.Fin et S.T[i] < x)
+            position ← S.Fin + 1 
+        sinon
+            position ← i 
+        fin si
+        pour i de S.Fin + 1 à k en décroissant faire
+            S.T[i] ← S.T[i-1]
+        fin pour
+        S.T[position] ← x 
+        S.Fin ← S.Fin + 1
+    Fin si
+Fin
+
+
+#liste trié
+algo_recherche_liste_trie(l:liste, x: entier) : booleen
+Debut
+    si (L = NIL ou L.Val >= x) 
+        p.Val ← x
+        p.Suivant ← L 
+        L←p 
+    sinon
+    L.Suivant ← Insérer(L.Suivant,x) 
+    fin si
+Fin
+ 
+
+
+#liste non trié
+algo_recherche_liste_non_trie(l:liste, x: entier) : booleen
+Debut
+    p.Val ← x 
+    p.Suivant ← L 
+    L←p
+Fin

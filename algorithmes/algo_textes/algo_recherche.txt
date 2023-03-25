@@ -1,0 +1,53 @@
+###RECHERCHER###
+
+# tableau non trié
+algo_recherche_tab_non_trie(tab:tableau, x: entier) : booleen
+Debut
+    Pour i allant de 1 à n:
+        Si tab[i] = x retourner Vrai
+        Fin si
+    Fin pour
+    Retourner faux
+Fin
+
+
+# tableau trié
+algo_insertion_tab_trie(tab: tableau,g : entier, d: entier, x: entier) : booleen
+Debut
+    Si g < d :
+        m <- (g+d) /2
+        si (x = tab[m])
+            retourner Vrai
+        sinon
+            si x < tab[m]
+                algo_recherche_liste_trie(tab,g,m-1,x) #partie de gauche
+            sinon
+                algo_insertion_tab_trie(tab,m+1,d,x) #partie de droite
+        Fin si
+    Sinon 
+        retourner faux
+    Fin Si
+Fin
+
+
+
+#liste non trié
+algo_recherche_liste_non_trie(l:liste, x: entier) : booleen
+Debut
+    p←L
+    tant que (p != NIL) faire
+        si (p.Val != x)
+            p← p.Suivant 
+        sinon 
+            retourner vrai
+        fin si 
+    fin tant que
+    retourner faux
+Fin
+ 
+
+
+#liste trié
+algo_recherche_liste_trie(l:liste, x: entier) : booleen
+Debut
+Fin
